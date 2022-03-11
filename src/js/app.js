@@ -18,3 +18,15 @@ baseFunction.testWebP();
 //получаем ширину полоски скрола
 const scrollLineWigth = baseFunction.scrollbarWidth();
 
+
+const articlesSlider = new Swiper('.articles__slider', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 47,
+    speed: 800,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+

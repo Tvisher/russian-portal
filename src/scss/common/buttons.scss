@@ -13,25 +13,15 @@
     background-color .3s ease,
     transform .3s ease,
     border-color .3s ease;
-    &:active {
-      transform: translateY(3px);
-    }
+    // &:active {
+    //   transform: translateY(3px);
+    // }
 }
 
-// .btnGreen {
-//   // background-color:$brand-green;
-//   color: #fff;
-//   &:hover {
-//     background-color:#fff;
-//     // color: $brand-green;
-//     // border-color: $brand-green;
-//   }
-// }
-
-// .btnWhite {
-//   background-color:#fff;
-//   // color: $brand-green;
-// }
+.blueBtn {
+  background-color:$brand-blue;
+  color: #fff;
+}
 
 button {
   cursor: pointer;

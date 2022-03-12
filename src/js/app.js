@@ -23,10 +23,22 @@ const articlesSlider = new Swiper('.articles__slider', {
     modules: [Navigation],
     slidesPerView: 1,
     spaceBetween: 47,
-    speed: 800,
+    speed: 1200,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-})
+});
+
+
+const companySlider = new Swiper('.company__slider', {
+    modules: [Navigation],
+    slidesPerView: 3,
+    spaceBetween: 16,
+    speed: 1200,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 

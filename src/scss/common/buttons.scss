@@ -15,6 +15,11 @@
     background-color .3s ease,
     transform .3s ease,
     border-color .3s ease;
+    &:hover {
+      border-color:$brand-black;
+      background-color: $brand-black;
+      color: #fff;
+    }
 }
 
 .blueBtn {
@@ -31,6 +36,7 @@
   background-color:transparent;
   color: #1D1E21;
   border-color: $mainFontColor;
+  font-weight: 600;
 }
 
 button {

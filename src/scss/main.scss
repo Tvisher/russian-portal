@@ -155,6 +155,7 @@ section {
   }
 }
 .header__lang {
+  background-color: #fff;
   cursor: pointer;
   justify-self: flex-start;
   font-weight: 600;
@@ -1186,7 +1187,7 @@ section {
      align-items: flex-end;
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     top: 0px;
     left: -100%;
@@ -1220,10 +1221,11 @@ section {
       display:block;
     }
     .nav__lang {
+      background-color: #fff;
       font-weight: 600;
       display: block;
       margin-top:auto;
-      margin-bottom: 50px;
+      margin-bottom: 90px;
     }
    }
 
@@ -1362,9 +1364,9 @@ section {
   }
 
   @media (max-width: 576px) {
-    // .other-sentence .section__title {
-    //   margin-bottom: 0;
-    // }
+    .benefits__list .list-item__title {
+      text-align: center;
+    }
     .review {
       margin-bottom: 30px;
     }

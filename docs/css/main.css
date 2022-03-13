@@ -1131,6 +1131,7 @@ button {
 }
 
 .header__lang {
+  background-color: #fff;
   cursor: pointer;
   justify-self: flex-start;
   font-weight: 600;
@@ -2322,7 +2323,7 @@ button {
     align-items: flex-end;
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     top: 0px;
     left: -100%;
@@ -2363,10 +2364,11 @@ button {
   }
 
   .header__nav .nav__lang {
+    background-color: #fff;
     font-weight: 600;
     display: block;
     margin-top: auto;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
   }
 
   .main-screen__title {
@@ -2554,6 +2556,10 @@ button {
 }
 
 @media (max-width: 576px) {
+  .benefits__list .list-item__title {
+    text-align: center;
+  }
+
   .review {
     margin-bottom: 30px;
   }

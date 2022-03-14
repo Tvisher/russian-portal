@@ -1,0 +1,208 @@
+@@include('./html/head.html',{
+"title": "Полезные компании"
+})
+
+<body>
+    @@include("./html/header-ru.html",{
+    "class" : "active"
+    })
+    <main class="main">
+        <section class="companies">
+            <div class="container small">
+                <h1 class="companies__title">Полезные компании</h1>
+                <div class="companies__filters">
+                    <select class="companies__select" name="" id="">
+                        <option selected value="">Все города</option>
+                        <option value="">Не все города</option>
+                        <option value="">Конкретный город</option>
+                    </select>
+                    <select class="companies__select" name="" id="">
+                        <option selected value="">Высокий рейтинг</option>
+                        <option value="">Низкий рейтинг</option>
+                        <option value="">Любой рейтинг</option>
+                    </select>
+                    <div class="companies__component">
+                        <label class="input__wrapper"><input type="text" class="companies__search" placeholder="Поиск"></label>
+                        <a href="#" class="companies__map-link">Карта</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="stisky__wrapper">
+                    <div class="stisky__menu">
+                        <ul class="companies__menu">
+                            <li class="list-item">
+                                <a href="#" class="active">Популярные</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Авдокаты</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Доктора</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Парикмахеры</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Автосервис</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Аренда жилья</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Поиск работы</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Еда</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Магазины</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#">Ещё</a>
+                            </li>
+                        </ul>
+                        <div class="stisky__info">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__img">
+                                    <img src="@img/location.svg" alt="">
+                                </div>
+                                <h5 class="list-item__title">Хотите добавить свою компанию, место, услугу?</h5>
+                                <a href="#" class="btn blueBtn">Напишите нам</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stisky__content">
+                        <div class="container small">
+                            <div class="companies__categogy">
+                                <h2 class="section__title" data-aos="fade-right">Популярные</h2>
+                                <ul class="other-sentence__list">
+                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                        <div class="list-item__img">
+                                            <img src="@img/company-img-3.jpg" alt="">
+                                        </div>
+                                        <div class="list-item__wrapper">
+                                            <div class="list-item__content">
+                                                <h3 class="list-item__title"><a href="#">Papa Pizza</a></h3>
+                                                <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
+                                                <div class="list-item__from">Атланта, 34 авеню</div>
+                                            </div>
+                                            <div class="star__raiting raiting">
+                                                <span class="raiting__num">4.2</span>
+                                                <i class="raiting__ico">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                        <div class="list-item__img">
+                                            <img src="@img/other-sentence-2.jpg" alt="">
+                                        </div>
+                                        <div class="list-item__wrapper">
+                                            <div class="list-item__content">
+                                                <h3 class="list-item__title"><a href="#">Блинная</a></h3>
+                                                <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
+                                                <div class="list-item__from">Атланта, 34 авеню</div>
+                                            </div>
+                                            <div class="star__raiting raiting">
+                                                <span class="raiting__num">5.0</span>
+                                                <i class="raiting__ico">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                        <div class="list-item__img">
+                                            <img src="@img/company-img-3.jpg" alt="">
+                                        </div>
+                                        <div class="list-item__wrapper">
+                                            <div class="list-item__content">
+                                                <h3 class="list-item__title"><a href="#">Papa Pizza</a></h3>
+                                                <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
+                                                <div class="list-item__from">Атланта, 34 авеню</div>
+                                            </div>
+                                            <div class="star__raiting raiting">
+                                                <span class="raiting__num">4.2</span>
+                                                <i class="raiting__ico">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="info-container" data-aos="fade-in">
+                                        <div class="info-container__wrapper">
+                                            <h3 class="info-container__title">ToDOgo</h3>
+                                            <h4 class="info-container__subtitle">Организация переезда в США от 50 000 ₽</h4>
+                                            <a href="#" class="btn blueBtn">Связаться</a>
+                                        </div>
+                                        <div class="info-container__img">
+                                            <img src="@img/info-img.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                        <div class="list-item__img">
+                                            <img src="@img/other-sentence-2.jpg" alt="">
+                                        </div>
+                                        <div class="list-item__wrapper">
+                                            <div class="list-item__content">
+                                                <h3 class="list-item__title"><a href="#">Блинная</a></h3>
+                                                <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
+                                                <div class="list-item__from">Атланта, 34 авеню</div>
+                                            </div>
+                                            <div class="star__raiting raiting">
+                                                <span class="raiting__num">5.0</span>
+                                                <i class="raiting__ico">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                        <div class="list-item__img">
+                                            <img src="@img/other-sentence-2.jpg" alt="">
+                                        </div>
+                                        <div class="list-item__wrapper">
+                                            <div class="list-item__content">
+                                                <h3 class="list-item__title"><a href="#">Блинная</a></h3>
+                                                <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
+                                                <div class="list-item__from">Атланта, 34 авеню</div>
+                                            </div>
+                                            <div class="star__raiting raiting">
+                                                <span class="raiting__num">5.0</span>
+                                                <i class="raiting__ico">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="companies__categogy__more">
+                                    <button class="btn blueBtn other-sentence__more" data-aos="fade-in">Показать еще</button>
+                                    <span class="amount">10 из 100</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container small">
+                    <ul class="benefits__list two">
+                        <li class="list-item" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__img">
+                                    <img src="@img/location.svg" alt="">
+                                </div>
+                                <h5 class="list-item__title">What to do when I moved</h5>
+                            </div>
+                        </li>
+                        <li class="list-item" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__img">
+                                    <img src="@img/bag.svg" alt="">
+                                </div>
+                                <h5 class="list-item__title">Let's tell you the companies that can help</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include("./html/footer.html")

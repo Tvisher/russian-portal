@@ -90,4 +90,13 @@ burgerMenu.addEventListener("click", (e) => {
     mobileMenu.classList.toggle('active');
     document.querySelector('body').classList.toggle('hidden');
 
-})
+});
+
+
+(function () {
+    const infoBaner = document.querySelector('.info-container');
+    if (infoBaner && infoBaner.previousElementSibling) {
+        infoBaner.previousElementSibling.style.border = 'none';
+    }
+}());
+

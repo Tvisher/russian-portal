@@ -78,6 +78,7 @@ const AOSSettings = {
 }
 window.addEventListener('load', (e) => {
     AOS.init(AOSSettings);
+    document.querySelector('#sidebar-menu').style.opacity = '1';
 });
 
 
@@ -100,3 +101,23 @@ burgerMenu.addEventListener("click", (e) => {
     }
 }());
 
+
+(function () {
+    const sidebarBtn = document.querySelector('#sidebar-btn');
+    const sidebarMenu = document.querySelector('#sidebar-menu');
+    if (sidebarBtn && sidebarMenu) {
+        sidebarBtn.onclick = (e) => {
+            sidebarMenu.classList.toggle('open');
+            sidebarBtn.classList.toggle('hide');
+        }
+        document.body.addEventListener('click', (e) => {
+            const target = e.target;
+            if (sidebarMenu.classList.contains('open')
+                && !target.closest('#sidebar-menu')
+                && !target.closest('#sidebar-btn')) {
+                sidebarMenu.classList.remove('open');
+                sidebarBtn.classList.remove('hide');
+            }
+        });
+    }
+}());

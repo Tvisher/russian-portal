@@ -89,8 +89,11 @@ section {
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 35px;
-  padding-right: 120px;
+  &.articles-title {
+    padding-right: 110px;
+  }
 }
+
 .container {
   width: 100%;
   flex: 0 0 auto;
@@ -100,7 +103,7 @@ section {
   padding: 0 20px;
 
   @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
+    // max-width: $tableWidth;
   }
 
   @media screen and (max-width: $tableWidth) {
@@ -128,6 +131,30 @@ section {
   }
   100%{
     opacity: 1;
+  }
+}
+
+.sidebar-btn {
+  display: none;
+  &:hover {
+    background-color: $brand-black;
+  }
+  cursor: pointer;
+  background-color: $brand-blue;
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 40px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 0 5px 5px 0;
+  svg {
+    transition: transform .4s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(180deg);
   }
 }
 
@@ -629,12 +656,6 @@ section {
     align-items: flex-start;
     margin-bottom: 20px;
   }
-  .company__name {
-    font-weight: 900;
-    font-size: 56px;
-    line-height: 111%;
-    padding-right: 10px;
-  }
   .company__data {
     flex: 0 0 auto;
   }
@@ -647,6 +668,13 @@ section {
     color:#1D1E21;
     margin-bottom: 24px;
   }
+}
+
+.company__name {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 111%;
+  padding-right: 10px;
 }
 
 .star__raiting {
@@ -1148,6 +1176,14 @@ section {
 
 
  @media (max-width: 992px) {
+   .companies__filters {
+     flex-direction: column;
+   }
+   .companies__selects,
+   .companies__component {
+     margin-bottom: 20px;
+     width: 100%;
+   }
    .header__search {
      margin-right: 3vw;
    }
@@ -1256,6 +1292,24 @@ section {
   }
 
   @media (max-width: 768px) {
+    .info-container .info-container__title {
+      font-size: 28px;
+    }
+    .info-container {
+      flex-direction: column;
+    }
+    .info-container .info-container__wrapper {
+      padding-right: 0;
+      flex: 0 0 auto;
+    }
+    .info-container .info-container__img {
+      flex: 0 0 auto;
+      order: -1;
+      margin-bottom: 20px;
+      img {
+        margin-left: auto;
+      }
+    }
     .company__slider {
       padding-top: 40px;
       margin-top: -40px;
@@ -1263,7 +1317,7 @@ section {
     .company__tags {
       margin-bottom: 45px;
     }
-    .company__head .company__name {
+   .company__name {
       font-size: 44px;
     }
     .company__head .wrapper {
@@ -1378,6 +1432,57 @@ section {
   }
 
   @media (max-width: 576px) {
+    .articles__list .article__title,
+    .other-sentence__list-item .list-item__title  {
+      font-size: 24px;
+      line-height: 120%;
+    }
+ 
+    .section__title {
+      font-size: 28px;
+    }
+    .companies .company__name {
+      font-size: 32px;
+    }
+    .stisky__wrapper .stisky__menu {
+      padding: 110px 15px 50px;
+    }
+    .stisky__info {
+      padding: 15px;
+    }
+    .stisky__info {
+      margin-top: 30px;
+    }
+    .companies .company__name {
+      margin-bottom: 20px;
+    }
+    .companies__selects {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      .companies__select {
+        flex: 0 0 100%;
+        margin-right: 0;
+        max-width: initial;
+        padding: 10px 0;
+      }
+    }
+    .input__wrapper {
+      width: auto;
+    }
+    .companies__categogy__more {
+      margin-top: 30px;
+    }
+    .companies {
+      padding-bottom: 40px;
+    }
+    .benefits__list.two {
+      .list-item {
+        flex: 0 0 100%;
+      }
+    }
+    .info-container {
+      padding: 15px;
+    }
     .benefits__list .list-item__title {
       text-align: center;
     }
@@ -1448,10 +1553,7 @@ section {
     .articles__list .article__content {
       padding-right: 0px;
     }
-    .articles__list .article__title {
-      font-size: 28px;
-      line-height: 120%;
-    }
+ 
     .articles__list .article {
       padding: 20px 15px 20px 0px;
     }
@@ -1467,7 +1569,7 @@ section {
     .info-title {
       margin-bottom: 15px;
     }
-    .company__head .company__name {
+    .company__name {
       font-size: 38px;
     }
     .review .review__solve {
@@ -1493,17 +1595,41 @@ section {
       text-align: center;
     }
   }
+
+  @media (max-width: 400px) {
+    .companies__component {
+      flex-wrap: wrap;
+      .input__wrapper {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .companies__map-link {
+        margin-left: auto;
+      }
+    }
+  }
 .companies {
+  padding-top: 30px;
   overflow: visible;
   padding-bottom: 100px;
+  .other-sentence__list-item:last-child {
+    border-bottom:$border-base;
+  }
+  .company__name {
+    margin-bottom: 35px;
+  }
 }
 .stisky__wrapper {
   padding-bottom: 30px;
   display: flex;
   align-items: flex-start;
   .stisky__menu {
+    opacity: 0;
+    transition: transform .8s ease-in-out, opacity .6s ease-in-out .5s;
     padding-right: 40px;
     max-width: 252px;
+    margin-left: -252px;
     position: sticky;
     top: 30px;
     width: 100%;
@@ -1540,11 +1666,11 @@ section {
 
   }
 }
-.companies__title {
-  font-size: 56px;
-  font-weight: 900;
-  margin-bottom: 35px;
-  line-height: 111%;
+
+.companies__selects {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .companies__select {
   margin-right: 22px;
@@ -1567,6 +1693,7 @@ section {
 
 }
 .companies__filters {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1599,6 +1726,7 @@ section {
   justify-content: flex-start;
 }
 .companies__categogy__more {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1621,13 +1749,13 @@ section {
   }
   .info-container__img {
     width: 100%;
-    height: 100%;
-    max-height: 160px;
+    height: 160px;
     overflow: hidden;
     img {
       object-fit: contain;
-      width: 100%;
-      width: 100%;
+      height: 100%;
+      width: auto;
+      margin-left: auto;
     } 
   }
   align-items: flex-start;
@@ -1680,3 +1808,73 @@ section {
     }
 }
 
+@media (max-width: 1439px) {
+  .sidebar-btn {
+    z-index: 11;
+    display: block;
+    transition: transform .8s ease-in-out, background-color 0.3s ease, border-radius 0.8s ease !important;
+    &.hide {
+      border-radius: 5px 0 0 5px;
+      transform: translateX(212px) !important;
+      svg {
+        transform: rotate(0);
+      }
+    }
+  }
+  .stisky__wrapper .stisky__menu {
+    box-shadow: 2px 0px 9px 1px rgba(0,0,0,0.1);
+    margin-left: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 110px 20px 50px;
+    background: #fff;
+    z-index: 10;
+    overflow: auto;
+    transform: translateX(-100%) !important;
+
+    &.open {
+     transform: translateX(0%) !important;
+    }
+  }
+  .stisky__wrapper {
+    justify-content: center;
+  }
+  .stisky__wrapper .stisky__content .container {
+    padding-left: 20px;
+  }
+}
+
+
+.title-container {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 76px;
+  .company__name {
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+  }
+  .title-container__img {
+    margin-top: 15px;
+    width: 186px;
+    height: 65px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .title-container {
+    margin-bottom: 30px;
+    flex-direction: column;
+    .company__name  {
+      margin-right: 0;
+    }
+  }
+}

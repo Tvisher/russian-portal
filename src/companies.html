@@ -6,30 +6,33 @@
     @@include("./html/header-ru.html",{
     "class" : "active"
     })
+    @@include("./html/sticky-item.html")
     <main class="main">
         <section class="companies">
             <div class="container small">
-                <h1 class="companies__title">Полезные компании</h1>
-                <div class="companies__filters">
-                    <select class="companies__select" name="" id="">
-                        <option selected value="">Все города</option>
-                        <option value="">Не все города</option>
-                        <option value="">Конкретный город</option>
-                    </select>
-                    <select class="companies__select" name="" id="">
-                        <option selected value="">Высокий рейтинг</option>
-                        <option value="">Низкий рейтинг</option>
-                        <option value="">Любой рейтинг</option>
-                    </select>
-                    <div class="companies__component">
+                <h1 class="companies__title company__name" data-aos="fade-right">Полезные компании</h1>
+                <div class="companies__filters" data-aos="fade-in" data-aos-delay="400">
+                    <div class="companies__selects">
+                        <select class="companies__select" name="" id="">
+                            <option selected value="">Все города</option>
+                            <option value="">Не все города</option>
+                            <option value="">Конкретный город</option>
+                        </select>
+                        <select class="companies__select" name="" id="">
+                            <option selected value="">Высокий рейтинг</option>
+                            <option value="">Низкий рейтинг</option>
+                            <option value="">Любой рейтинг</option>
+                        </select>
+                    </div>
+                    <div class="companies__component" data-aos="fade-in" data-aos-delay="400">
                         <label class="input__wrapper"><input type="text" class="companies__search" placeholder="Поиск"></label>
                         <a href="#" class="companies__map-link">Карта</a>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container small">
                 <div class="stisky__wrapper">
-                    <div class="stisky__menu">
+                    <div class="stisky__menu" id="sidebar-menu">
                         <ul class="companies__menu">
                             <li class="list-item">
                                 <a href="#" class="active">Популярные</a>
@@ -73,135 +76,130 @@
                         </div>
                     </div>
                     <div class="stisky__content">
-                        <div class="container small">
-                            <div class="companies__categogy">
-                                <h2 class="section__title" data-aos="fade-right">Популярные</h2>
-                                <ul class="other-sentence__list">
-                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
-                                        <div class="list-item__img">
-                                            <img src="@img/company-img-3.jpg" alt="">
+                        <div class="companies__categogy">
+                            <h2 class="section__title" data-aos="fade-right" data-aos-delay="200">Популярные</h2>
+                            <ul class="other-sentence__list">
+                                <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                    <div class="list-item__img">
+                                        <img src="@img/company-img-3.jpg" alt="">
+                                    </div>
+                                    <div class="list-item__wrapper">
+                                        <div class="list-item__content">
+                                            <h3 class="list-item__title"><a href="#">Papa Pizza</a></h3>
+                                            <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
+                                            <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
-                                        <div class="list-item__wrapper">
-                                            <div class="list-item__content">
-                                                <h3 class="list-item__title"><a href="#">Papa Pizza</a></h3>
-                                                <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
-                                                <div class="list-item__from">Атланта, 34 авеню</div>
-                                            </div>
-                                            <div class="star__raiting raiting">
-                                                <span class="raiting__num">4.2</span>
-                                                <i class="raiting__ico">
-                                                </i>
-                                            </div>
+                                        <div class="star__raiting raiting">
+                                            <span class="raiting__num">4.2</span>
+                                            <i class="raiting__ico">
+                                            </i>
                                         </div>
-                                    </li>
-                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
-                                        <div class="list-item__img">
-                                            <img src="@img/other-sentence-2.jpg" alt="">
+                                    </div>
+                                </li>
+                                <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                    <div class="list-item__img">
+                                        <img src="@img/petreov.jpg" alt="">
+                                    </div>
+                                    <div class="list-item__wrapper">
+                                        <div class="list-item__content">
+                                            <h3 class="list-item__title"><a href="#">Адвокат Петров</a></h3>
+                                            <p class="list-item__desc">Частная практика. Решение миграционных вопросов</p>
+                                            <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
-                                        <div class="list-item__wrapper">
-                                            <div class="list-item__content">
-                                                <h3 class="list-item__title"><a href="#">Блинная</a></h3>
-                                                <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
-                                                <div class="list-item__from">Атланта, 34 авеню</div>
-                                            </div>
-                                            <div class="star__raiting raiting">
-                                                <span class="raiting__num">5.0</span>
-                                                <i class="raiting__ico">
-                                                </i>
-                                            </div>
+                                        <div class="star__raiting raiting">
+                                            <span class="raiting__num">5.0</span>
+                                            <i class="raiting__ico">
+                                            </i>
                                         </div>
-                                    </li>
-                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
-                                        <div class="list-item__img">
-                                            <img src="@img/company-img-3.jpg" alt="">
+                                    </div>
+                                </li>
+                                <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                    <div class="list-item__img">
+                                        <img src="@img/eat.jpg" alt="">
+                                    </div>
+                                    <div class="list-item__wrapper">
+                                        <div class="list-item__content">
+                                            <h3 class="list-item__title"><a href="#">Борщи как дома</a></h3>
+                                            <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
+                                            <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
-                                        <div class="list-item__wrapper">
-                                            <div class="list-item__content">
-                                                <h3 class="list-item__title"><a href="#">Papa Pizza</a></h3>
-                                                <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
-                                                <div class="list-item__from">Атланта, 34 авеню</div>
-                                            </div>
-                                            <div class="star__raiting raiting">
-                                                <span class="raiting__num">4.2</span>
-                                                <i class="raiting__ico">
-                                                </i>
-                                            </div>
+                                        <div class="star__raiting raiting">
+                                            <span class="raiting__num">4.2</span>
+                                            <i class="raiting__ico">
+                                            </i>
                                         </div>
-                                    </li>
-                                    <li class="info-container" data-aos="fade-in">
-                                        <div class="info-container__wrapper">
-                                            <h3 class="info-container__title">ToDOgo</h3>
-                                            <h4 class="info-container__subtitle">Организация переезда в США от 50 000 ₽</h4>
-                                            <a href="#" class="btn blueBtn">Связаться</a>
+                                    </div>
+                                </li>
+                                <li class="info-container" data-aos="fade-in">
+                                    <div class="info-container__wrapper">
+                                        <h3 class="info-container__title">ToDOgo</h3>
+                                        <h4 class="info-container__subtitle">Организация переезда в США от 50 000 ₽</h4>
+                                        <a href="#" class="btn blueBtn">Связаться</a>
+                                    </div>
+                                    <div class="info-container__img">
+                                        <img src="@img/info-img.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                    <div class="list-item__img">
+                                        <img src="@img/car.jpg" alt="">
+                                    </div>
+                                    <div class="list-item__wrapper">
+                                        <div class="list-item__content">
+                                            <h3 class="list-item__title"><a href="#">Автосервис 4x4</a></h3>
+                                            <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
+                                            <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
-                                        <div class="info-container__img">
-                                            <img src="@img/info-img.png" alt="">
+                                        <div class="star__raiting raiting">
+                                            <span class="raiting__num">5.0</span>
+                                            <i class="raiting__ico">
+                                            </i>
                                         </div>
-                                    </li>
-                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
-                                        <div class="list-item__img">
-                                            <img src="@img/other-sentence-2.jpg" alt="">
+                                    </div>
+                                </li>
+                                <li class="list-item other-sentence__list-item" data-aos="fade-in">
+                                    <div class="list-item__img">
+                                        <img src="@img/caravan.jpg" alt="">
+                                    </div>
+                                    <div class="list-item__wrapper">
+                                        <div class="list-item__content">
+                                            <h3 class="list-item__title"><a href="#">Караван</a></h3>
+                                            <p class="list-item__desc">Реэлторское агенство. Помогаем с переездом</p>
+                                            <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
-                                        <div class="list-item__wrapper">
-                                            <div class="list-item__content">
-                                                <h3 class="list-item__title"><a href="#">Блинная</a></h3>
-                                                <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
-                                                <div class="list-item__from">Атланта, 34 авеню</div>
-                                            </div>
-                                            <div class="star__raiting raiting">
-                                                <span class="raiting__num">5.0</span>
-                                                <i class="raiting__ico">
-                                                </i>
-                                            </div>
+                                        <div class="star__raiting raiting">
+                                            <span class="raiting__num">5.0</span>
+                                            <i class="raiting__ico">
+                                            </i>
                                         </div>
-                                    </li>
-                                    <li class="list-item other-sentence__list-item" data-aos="fade-in">
-                                        <div class="list-item__img">
-                                            <img src="@img/other-sentence-2.jpg" alt="">
-                                        </div>
-                                        <div class="list-item__wrapper">
-                                            <div class="list-item__content">
-                                                <h3 class="list-item__title"><a href="#">Блинная</a></h3>
-                                                <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
-                                                <div class="list-item__from">Атланта, 34 авеню</div>
-                                            </div>
-                                            <div class="star__raiting raiting">
-                                                <span class="raiting__num">5.0</span>
-                                                <i class="raiting__ico">
-                                                </i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="companies__categogy__more">
-                                    <button class="btn blueBtn other-sentence__more" data-aos="fade-in">Показать еще</button>
-                                    <span class="amount">10 из 100</span>
-                                </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="companies__categogy__more" data-aos="fade-in">
+                                <button class="btn blueBtn other-sentence__more">Показать еще</button>
+                                <span class="amount">10 из 100</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <div class="container small">
-                    <ul class="benefits__list two">
-                        <li class="list-item" data-aos="zoom-in" data-aos-delay="250">
-                            <div class="list-item__wrapper">
-                                <div class="list-item__img">
-                                    <img src="@img/location.svg" alt="">
-                                </div>
-                                <h5 class="list-item__title">What to do when I moved</h5>
+                <ul class="benefits__list two">
+                    <li class="list-item" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="list-item__wrapper">
+                            <div class="list-item__img">
+                                <img src="@img/location.svg" alt="">
                             </div>
-                        </li>
-                        <li class="list-item" data-aos="zoom-in" data-aos-delay="350">
-                            <div class="list-item__wrapper">
-                                <div class="list-item__img">
-                                    <img src="@img/bag.svg" alt="">
-                                </div>
-                                <h5 class="list-item__title">Let's tell you the companies that can help</h5>
+                            <h5 class="list-item__title">What to do when I moved</h5>
+                        </div>
+                    </li>
+                    <li class="list-item" data-aos="zoom-in" data-aos-delay="350">
+                        <div class="list-item__wrapper">
+                            <div class="list-item__img">
+                                <img src="@img/bag.svg" alt="">
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <h5 class="list-item__title">Let's tell you the companies that can help</h5>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

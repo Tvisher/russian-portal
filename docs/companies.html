@@ -14,8 +14,8 @@
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css?_v=20220315231933" />
-    <link rel="stylesheet" href="css/main.min.css?_v=20220315231933">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css?_v=20220317054906" />
+    <link rel="stylesheet" href="css/main.min.css?_v=20220317054906">
 </head>
 
 <body>
@@ -26,10 +26,12 @@
                 <a href="/" class="header__logo">
                     <img src="img/main-logo.svg" alt="logo">
                 </a>
-                <select class="header__lang">
-                    <option value="en">EN</option>
-                    <option selected value="ru">RU</option>
-                </select>
+                <div class="select-wrapper">
+                    <select class="header__lang">
+                        <option value="en">EN</option>
+                        <option selected value="ru">RU</option>
+                    </select>
+                </div>
             </div>
             <nav class="header__nav" data-mobile-menu>
                 <span class="nav__title">Меню</span>
@@ -86,20 +88,24 @@
                 <h1 class="companies__title company__name" data-aos="fade-right">Полезные компании</h1>
                 <div class="companies__filters" data-aos="fade-in" data-aos-delay="400">
                     <div class="companies__selects">
-                        <select class="companies__select" name="" id="">
-                            <option selected value="">Все города</option>
-                            <option value="">Не все города</option>
-                            <option value="">Конкретный город</option>
-                        </select>
-                        <select class="companies__select" name="" id="">
-                            <option selected value="">Высокий рейтинг</option>
-                            <option value="">Низкий рейтинг</option>
-                            <option value="">Любой рейтинг</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select class="companies__select" name="" id="">
+                                <option selected value="">Все города</option>
+                                <option value="">Не все города</option>
+                                <option value="">Конкретный город</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select class="companies__select" name="" id="">
+                                <option selected value="">Высокий рейтинг</option>
+                                <option value="">Низкий рейтинг</option>
+                                <option value="">Любой рейтинг</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="companies__component" data-aos="fade-in" data-aos-delay="400">
                         <label class="input__wrapper"><input type="text" class="companies__search" placeholder="Поиск"></label>
-                        <a href="#" class="companies__map-link">Карта</a>
+                        <a href="#" class="companies__map-link underlined-link">Карта</a>
                     </div>
                 </div>
             </div>
@@ -108,34 +114,34 @@
                     <div class="stisky__menu" id="sidebar-menu">
                         <ul class="companies__menu">
                             <li class="list-item">
-                                <a href="#" class="active">Популярные</a>
+                                <a href="#" class="active underlined-link">Популярные</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Авдокаты</a>
+                                <a href="#" class="underlined-link">Адвокаты</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Доктора</a>
+                                <a href="#" class="underlined-link">Доктора</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Парикмахеры</a>
+                                <a href="#" class="underlined-link">Парикмахеры</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Автосервис</a>
+                                <a href="#" class="underlined-link">Автосервис</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Аренда жилья</a>
+                                <a href="#" class="underlined-link">Аренда жилья</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Поиск работы</a>
+                                <a href="#" class="underlined-link">Поиск работы</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Еда</a>
+                                <a href="#" class="underlined-link">Еда</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Магазины</a>
+                                <a href="#" class="underlined-link">Магазины</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">Ещё</a>
+                                <a href="#" class="underlined-link">Ещё</a>
                             </li>
                         </ul>
                         <div class="stisky__info">
@@ -158,7 +164,7 @@
                                     </div>
                                     <div class="list-item__wrapper">
                                         <div class="list-item__content">
-                                            <h3 class="list-item__title"><a href="company.html">Papa Pizza</a></h3>
+                                            <h3 class="list-item__title"><a class="underlined-link" href="company.html">Papa Pizza</a></h3>
                                             <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
                                             <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
@@ -175,7 +181,7 @@
                                     </div>
                                     <div class="list-item__wrapper">
                                         <div class="list-item__content">
-                                            <h3 class="list-item__title"><a href="#">Адвокат Петров</a></h3>
+                                            <h3 class="list-item__title"><a href="#" class="underlined-link">Адвокат Петров</a></h3>
                                             <p class="list-item__desc">Частная практика. Решение миграционных вопросов</p>
                                             <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
@@ -192,7 +198,7 @@
                                     </div>
                                     <div class="list-item__wrapper">
                                         <div class="list-item__content">
-                                            <h3 class="list-item__title"><a href="#">Борщи как дома</a></h3>
+                                            <h3 class="list-item__title"><a class="underlined-link href=" #">Борщи как дома</a></h3>
                                             <p class="list-item__desc">Русская кухня. Уютный ресторан лучших рецепто русской кухни. Ждем в гости. Средний чек 50$</p>
                                             <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
@@ -219,7 +225,7 @@
                                     </div>
                                     <div class="list-item__wrapper">
                                         <div class="list-item__content">
-                                            <h3 class="list-item__title"><a href="#">Автосервис 4x4</a></h3>
+                                            <h3 class="list-item__title"><a class="underlined-link href=" #">Автосервис 4x4</a></h3>
                                             <p class="list-item__desc">Сеть пиццерий с домашними рецептами. Отличное место с вкусной пиццей</p>
                                             <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
@@ -236,7 +242,7 @@
                                     </div>
                                     <div class="list-item__wrapper">
                                         <div class="list-item__content">
-                                            <h3 class="list-item__title"><a href="#">Караван</a></h3>
+                                            <h3 class="list-item__title"><a class="underlined-link href=" #">Караван</a></h3>
                                             <p class="list-item__desc">Реэлторское агенство. Помогаем с переездом</p>
                                             <div class="list-item__from">Атланта, 34 авеню</div>
                                         </div>
@@ -289,25 +295,25 @@
             <nav class="footer__nav col" data-aos="zoom-in">
                 <ul class="nav-list">
                     <li class="list-item">
-                        <a href="#">I want to move</a>
+                        <a class="underlined-link" href="#">I want to move</a>
                     </li>
                     <li class="list-item">
-                        <a href="#">Already in the USA</a>
+                        <a class="underlined-link" href="#">Already in the USA</a>
                     </li>
                     <li class="list-item">
-                        <a href="#">Useful companies</a>
+                        <a class="underlined-link" href="#">Useful companies</a>
                     </li>
                 </ul>
             </nav>
             <ul class="footer__links col" data-aos="zoom-in">
                 <li class="list-item">
-                    <a href="">About</a>
+                    <a class="underlined-link" href="">About</a>
                 </li>
                 <li class="list-item">
-                    <a href="">I want to add a company</a>
+                    <a class="underlined-link" href="">I want to add a company</a>
                 </li>
                 <li class="list-item">
-                    <a href="">I want to write an article</a>
+                    <a class="underlined-link" href="">I want to write an article</a>
                 </li>
             </ul>
         </div>
@@ -320,6 +326,6 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js?_v=20220315231933"></script>
-<script src="js/app.min.js?_v=20220315231933"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js?_v=20220317054906"></script>
+<script src="js/app.min.js?_v=20220317054906"></script>
 </body>

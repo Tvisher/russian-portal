@@ -20,6 +20,16 @@
       background-color: $brand-black;
       color: #fff;
     }
+    &:active {
+      transform: translateY(2px);
+    }
+    &.wide {
+      padding: 8px 28px;
+    }
+    &.wery-wide {
+      padding: 8px 43px;
+
+    }
 }
 
 .blueBtn {

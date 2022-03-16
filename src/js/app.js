@@ -19,6 +19,7 @@ baseFunction.testWebP();
 const scrollLineWigth = baseFunction.scrollbarWidth();
 
 
+
 const articlesSlider = new Swiper('.articles__slider', {
     modules: [Navigation],
     slidesPerView: 1,
@@ -56,6 +57,27 @@ const companySlider = new Swiper('.company__slider', {
 });
 
 
+const usefulCompaniesSlider = new Swiper('.useful-companies__slider', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 1200,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        },
+        480: {
+            slidesPerView: 2,
+        }
+    },
+});
+
+
 const AOSSettings = {
     // Global settings:
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -78,28 +100,41 @@ const AOSSettings = {
 }
 window.addEventListener('load', (e) => {
     AOS.init(AOSSettings);
-    document.querySelector('#sidebar-menu').style.opacity = '1';
+    const sidebar = document.querySelector('#sidebar-menu');
+    if (sidebar) {
+        sidebar.style.opacity = '1';
+    }
 });
+
+const header = document.querySelector('header');
+window.addEventListener('scroll', headerFix)
+function headerFix() {
+    const scroll = window.pageYOffset;
+    if (scroll > 0) {
+        header.classList.add('fixed');
+    } else {
+        header.classList.remove('fixed');
+    }
+}
+headerFix();
 
 
 
 const burgerMenu = document.querySelector('#open-menu');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
-
 burgerMenu.addEventListener("click", (e) => {
     burgerMenu.classList.toggle('active');
     mobileMenu.classList.toggle('active');
     document.querySelector('body').classList.toggle('hidden');
-
 });
 
 
-(function () {
-    const infoBaner = document.querySelector('.info-container');
-    if (infoBaner && infoBaner.previousElementSibling) {
-        infoBaner.previousElementSibling.style.border = 'none';
-    }
-}());
+// (function () {
+//     const infoBaner = document.querySelector('.info-container');
+//     if (infoBaner && infoBaner.previousElementSibling) {
+//         infoBaner.previousElementSibling.style.border = 'none';
+//     }
+// }());
 
 
 (function () {

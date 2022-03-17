@@ -14,19 +14,45 @@
                                   not supported by any browser */
 }
 
-
-a {
-  u{
-    transition: border-color .3s ease;
-    border-bottom: 1px solid rgba(125,191,184,.3);
-    text-decoration: none;
-    transition: all .3s ease;
-    font-weight: 700;
+.select {
+  color: $mainFontColor;
+}
+.select-wrapper {
+  margin-right: 25px;
+  select  {
+    cursor: pointer;
+  -webkit-appearance : none;
   }
-  &:hover u {
-    border-color:$brand-blue;
+  position:relative;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 7px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L6 4.58579L10.2929 0.292893C10.6834 -0.0976311 11.3166 -0.0976311 11.7071 0.292893C12.0976 0.683417 12.0976 1.31658 11.7071 1.70711L6.70711 6.70711C6.31658 7.09763 5.68342 7.09763 5.29289 6.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z' fill='black'/%3e%3c/svg%3e ");
+    background-position: right center;
+    background-repeat  : no-repeat;
   }
 }
+
+.underlined-link {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.3s ease-in-out !important;
+  /*add those for opera and mozilla support*/
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+ }
+ .underlined-link:hover{
+  text-decoration-color: $brand-blue;
+  /*add those for opera and mozilla support*/
+  -webkit-text-decoration-color: $brand-blue;
+  -moz-text-decoration-color: $brand-blue;
+ }
 
 html {
   scroll-behavior: smooth;
@@ -61,9 +87,7 @@ body {
   background-color: #fff;
   &.hidden {
     overflow: hidden;
-    // main {
-    //   opacity: 0;
-    // }
+
   }
 }
 
@@ -220,8 +244,20 @@ section {
 .header__right,
 .header__left {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   flex: 0 0 20%;
+}
+.header__right {
+  align-items: stretch;
+}
+.header__left {
+  .select-wrapper {
+    flex: 0 0 auto;
+    padding-right: 20px;
+    select {
+      width: 200%;
+    }
+  }
 }
 
 .header__right {
@@ -882,7 +918,7 @@ main {
   flex: 0 0 40%;
   font-style: normal;
   position: sticky;
-  top: 30px;
+  top: 107px;
   padding-left: 70px;
 }
 .address__link {
@@ -1251,6 +1287,7 @@ main {
      margin-bottom: 20px;
      width: 100%;
    }
+   
    .header__search {
      margin-right: 3vw;
    }
@@ -1268,10 +1305,10 @@ main {
       height: 28px; 
      }
    }
-  .header__logo {
+  .header__left {
     margin-right: 2vw;
   }
-   .header__lang {
+  .header__left .select-wrapper{
      display: none;
    }
    .header__burger {
@@ -1522,7 +1559,27 @@ main {
   }
 
   @media (max-width: 576px) {
-
+    .article__tags {
+      margin-bottom: 20px;
+    }
+    .tags-namepalte {
+      margin-right: 10px;
+    }
+    .main {
+      padding-top: 60px;
+    }
+    .article__col .article__desc {
+      margin-top: 10px;
+    }
+    .article-page .author__link {
+      margin-bottom: 5px;
+    }
+    .article__socials {
+      margin-left: 0;
+    }
+    .action-block  {
+      margin: 10px 0;
+    }
     .useful-companies__slider {
       padding-top: 40px;
       margin-top: -20px;
@@ -1544,7 +1601,7 @@ main {
       line-height: 120%;
     }
     .article__info-block {
-      padding: 30px;
+      padding: 20px;
       margin: 20px 0;
     }
     .article__tags .article__tag {
@@ -1573,11 +1630,17 @@ main {
     .companies__selects {
       flex-wrap: wrap;
       margin-bottom: 10px;
-      .companies__select {
+      .companies__select,
+      .select-wrapper {
         flex: 0 0 100%;
         margin-right: 0;
         max-width: initial;
         padding: 10px 0;
+        width: 100%;
+        margin-right: 0;
+      }
+      .companies__select {
+        padding: 0;
       }
     }
     .input__wrapper {
@@ -1994,6 +2057,12 @@ main {
 }
 
 @media (max-width: 576px) {
+  .header {
+    padding: 5px 0;
+  }
+  .sidebar-btn {
+    top: 56px;
+  }
   .title-container {
     margin-bottom: 30px;
     flex-direction: column;

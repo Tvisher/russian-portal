@@ -1244,6 +1244,7 @@ main {
      display: flex;
      align-items: flex-start;
      justify-content: flex-start;
+     width: 100%;
    }
    .list-item__from {
      font-size: 18px;
@@ -1266,6 +1267,10 @@ main {
    }
    .list-item__content {
      margin-right: 16px;
+     width: 100%;
+   }
+   .star__raiting {
+     margin-left: auto;
    }
  }
 

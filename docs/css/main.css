@@ -4473,6 +4473,22 @@ a.article__comments:hover svg g {
 }
 
 @media (max-width: 576px) {
+  .article__col .article__desc {
+    margin-top: 10px;
+  }
+
+  .article-page .author__link {
+    margin-bottom: 5px;
+  }
+
+  .article__socials {
+    margin-left: 0;
+  }
+
+  .action-block {
+    margin: 10px 0;
+  }
+
   .useful-companies__slider {
     padding-top: 40px;
     margin-top: -20px;
@@ -4499,7 +4515,7 @@ a.article__comments:hover svg g {
   }
 
   .article__info-block {
-    padding: 30px;
+    padding: 20px;
     margin: 20px 0;
   }
 
@@ -4668,6 +4684,14 @@ a.article__comments:hover svg g {
 
   .articles__slider {
     margin-bottom: 10px;
+  }
+
+  .header {
+    padding: 5px 0;
+  }
+
+  .sidebar-btn {
+    top: 56px;
   }
 
   .title-container {

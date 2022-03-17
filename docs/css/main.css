@@ -4473,6 +4473,18 @@ a.article__comments:hover svg g {
 }
 
 @media (max-width: 576px) {
+  .article__tags {
+    margin-bottom: 20px;
+  }
+
+  .tags-namepalte {
+    margin-right: 10px;
+  }
+
+  .main {
+    padding-top: 56px;
+  }
+
   .article__col .article__desc {
     margin-top: 10px;
   }

@@ -3406,6 +3406,7 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .other-sentence__list-item .list-item__from {
@@ -3431,6 +3432,11 @@ main {
 
 .other-sentence__list-item .list-item__content {
   margin-right: 16px;
+  width: 100%;
+}
+
+.other-sentence__list-item .star__raiting {
+  margin-left: auto;
 }
 
 .companies {

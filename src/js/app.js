@@ -156,3 +156,57 @@ burgerMenu.addEventListener("click", (e) => {
         });
     }
 }());
+
+
+//Логика работы новера на ссылках меню
+(function () {
+    const target = document.querySelector(".flying-target");
+    const links = document.querySelectorAll(".hover-elem a");
+
+    function mouseenterFunc() {
+        target.style.opacity = "1";
+        if (!this.parentNode.classList.contains("active")) {
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].parentNode.classList.contains("active")) {
+                    links[i].parentNode.classList.remove("active");
+                }
+            }
+            this.parentNode.classList.add("active");
+            const width = this.getBoundingClientRect().width;
+            const height = this.getBoundingClientRect().height;
+            const left = this.getBoundingClientRect().left;
+            const top = this.getBoundingClientRect().top + 5;
+            const color = '#0066FF';
+
+            target.style.width = `${width}px`;
+            target.style.height = `${height}px`;
+            target.style.left = `${left}px`;
+            target.style.top = `${top}px`;
+            target.style.borderColor = color;
+            target.style.transform = "none";
+        }
+    }
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", (e) => e.preventDefault());
+        links[i].addEventListener("mouseover", mouseenterFunc);
+        links[i].addEventListener("mouseout", function () {
+            target.style.opacity = "0";
+        });
+    }
+
+    function resizeFunc() {
+        const active = document.querySelector(".hover-elem.active");
+
+        if (active) {
+            const left = active.getBoundingClientRect().left;
+            const top = active.getBoundingClientRect().top;
+
+            target.style.left = `${left}px`;
+            target.style.top = `${top}px`;
+        }
+    }
+
+    window.addEventListener("resize", resizeFunc);
+
+})();

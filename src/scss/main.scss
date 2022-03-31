@@ -556,7 +556,7 @@ main {
 .article-slide__date {
   font-size: 15px;
   color: $brand-gray;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .article-slide__author {
@@ -965,6 +965,7 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   font-weight: 600;
+  margin-bottom: 20px;
 
   svg {
     margin-right: 10px;
@@ -2179,7 +2180,7 @@ main {
 }
 
 .companies {
-  padding-top: 30px;
+  padding-top: 50px;
   overflow: visible;
   padding-bottom: 100px;
 
@@ -2197,13 +2198,23 @@ main {
   display: flex;
   align-items: flex-start;
 
+  &.inner {
+    .stisky__content {
+      padding-top: 67px;
+
+    }
+  }
+
   .stisky__menu {
+    padding-top: 20px;
     top: 106px;
     opacity: 0;
     transition: transform .8s ease-in-out, opacity .6s ease-in-out .5s;
     padding-right: 40px;
     max-width: 252px;
     margin-left: -252px;
+    // max-width: 273px;
+    // margin-left: -273px;
     position: sticky;
     top: 107px;
     width: 100%;
@@ -2228,7 +2239,7 @@ main {
 
 .companies__menu {
   .list-item {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     line-height: 120%;
   }
 
@@ -2466,7 +2477,7 @@ main {
   flex-wrap: wrap;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 76px;
+  // margin-bottom: 76px;
 
   .company__name {
     margin-right: 10px;
@@ -2501,12 +2512,16 @@ main {
   }
 
   .title-container {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     flex-direction: column;
 
     .company__name {
       margin-right: 0;
     }
+  }
+
+  .stisky__wrapper.inner .stisky__content {
+    padding-top: 30px;
   }
 }
 

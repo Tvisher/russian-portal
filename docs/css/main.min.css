@@ -2871,7 +2871,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .company__tag {
@@ -2927,14 +2927,24 @@ main {
 }
 
 .company__slider .swiper-slide {
+  cursor: pointer;
   height: auto;
   max-height: 250px;
+}
+
+.company__slider .swiper-slide:hover img {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.company__slider .swiper-slide:hover .company__img {
+  border-radius: 15px;
 }
 
 .company__slider .company__img {
   height: 250px;
   overflow: hidden;
   border-radius: 24px;
+  transition: border-radius 0.4s ease-in-out 0s;
 }
 
 .company__slider .company__img img {
@@ -2942,6 +2952,8 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  will-change: transform;
+  transition: transform 0.4s ease-in-out 0s;
 }
 
 .company__contacts {

@@ -1903,6 +1903,19 @@ main {
     margin-bottom: 20px;
   }
 
+  .auth-modal__title {
+    margin-bottom: 30px;
+  }
+
+  .auth-modal__body {
+    transform: translateY(50px);
+  }
+
+  .custom-checkbox__label .custom-checkbox__text {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
   .tags-namepalte {
     margin-right: 10px;
   }
@@ -2273,9 +2286,9 @@ main {
       color: rgba(0, 0, 0, 1);
       border-left: 3px solid $brand-blue;
     }
-
   }
 }
+
 
 .companies__selects {
   display: flex;
@@ -2293,7 +2306,6 @@ main {
   font-size: 15px;
   padding-bottom: 5px;
   padding-top: 5px;
-
 }
 
 .companies__search {
@@ -2945,4 +2957,220 @@ a.article__comments {
   z-index: -1;
   transition: all .35s ease-in-out;
   will-change: all;
+}
+
+
+.auth-modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  visibility: hidden;
+  overflow: auto;
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+.auth-modal__body {
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+  transform: translateY(100px);
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.auth-modal__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.auth-modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.custom__label {
+  position: relative;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.custom__label-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: $brand-gray;
+  z-index: 1;
+  transition: transform .3s ease-in-out, top .3s ease-in-out, font-size .3s ease-in-out;
+  will-change: transform;
+
+
+  &.fixed {
+    top: 0;
+    transform: translateY(0);
+    font-size: 14px;
+  }
+}
+
+.custom__label-input {
+  width: 100%;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+  border-bottom: 2px solid #D9E2E6;
+  transition: border-color .3s ease-in-out;
+
+  &:focus {
+    border-color: $brand-blue;
+  }
+}
+
+
+.custom-checkbox__label {
+  position: relative;
+  padding: 10px 0;
+
+  .custom-checkbox__text a {
+    z-index: 2;
+    position: relative;
+    display: inline;
+    color: $mainFontColor;
+    text-decoration: underline;
+    transition: color .3s ease;
+
+    &:hover {
+      color: #FF2149;
+    }
+  }
+
+  .custom-checkbox__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked+.custom-checkbox__text {
+
+      &::after {
+        opacity: 1;
+      }
+
+      &:before {
+        background-color: $brand-blue;
+      }
+    }
+  }
+
+  .custom-checkbox__text {
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: $border-base;
+      background-color: transparent;
+      transition: background-color .3s ease;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 4.5L5 8.5L12.5 1' stroke='white' stroke-width='2'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 70%;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+  }
+}
+
+.auth-modal__form-footer {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .modal-switch {
+    display: inline;
+    color: $brand-blue;
+    font-size: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .foret-pathword {
+    color: $brand-gray;
+    margin-bottom: 20px;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  &::before,
+  &::after {
+    border-radius: 2px;
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 25px;
+    left: 7.5px;
+    background-color: $brand-gray;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
 }

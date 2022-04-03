@@ -42,6 +42,60 @@
     </div>
 </footer>
 
+<div class="auth-modal" id="registration">
+    <button class="modal-close"></button>
+    <div class="auth-modal__body">
+        <h3 class="auth-modal__title">Registration</h3>
+        <form action="#" class="auth-modal__form">
+            <label class="custom__label">
+                <span class="custom__label-text">Username</span>
+                <input autocomplete="off" type="text" name="username" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom__label">
+                <span class="custom__label-text">Email</span>
+                <input autocomplete="off" type="email" name="email" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom__label">
+                <span class="custom__label-text">Password</span>
+                <input autocomplete="off" type="password" name="password" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom__label">
+                <span class="custom__label-text">Confirm password</span>
+                <input autocomplete="off" type="password" name="password-repeat" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom-checkbox__label">
+                <input type="checkbox" name="registration-checkbox" class="custom-checkbox__input" checked required>
+                <span class="custom-checkbox__text">Accept the <a href="#">terms</a> and <a href="#">policies</a></span>
+            </label>
+            <div class="auth-modal__form-footer">
+                <button type="submit" class="btn blueBtn">Registration</button>
+                or <a class="modal-switch" href="#authorization">Sign in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="auth-modal" id="authorization">
+    <button class="modal-close"></button>
+    <div class="auth-modal__body">
+        <h3 class="auth-modal__title">Sign in</h3>
+        <form action="#" class="auth-modal__form">
+            <label class="custom__label">
+                <span class="custom__label-text">Username</span>
+                <input autocomplete="off" type="text" name="username" class="custom__label-input" required data-focus-input>
+            </label>
+
+            <label class="custom__label">
+                <span class="custom__label-text">Password</span>
+                <input autocomplete="off" type="password" name="password" class="custom__label-input" required data-focus-input>
+            </label>
+            <div class="auth-modal__form-footer">
+                <a href="#" class="foret-pathword">Forget your password ?</a>
+                <button type="submit" class="btn blueBtn">Sign in</button>
+                or <a class="modal-switch" href="#registration">Registration</a>
+            </div>
+        </form>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="js/app.min.js"></script>
 </body>

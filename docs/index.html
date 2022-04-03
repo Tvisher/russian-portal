@@ -60,7 +60,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0977 20.6834 22.0977 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z" fill="black" />
                     </svg>
                 </button>
-                <button class="header__login btn blueBtn">
+                <button class="header__login btn blueBtn" id="login-btn">
                     <div class="login-ico">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
                             <path d="M783.7,755.3c0,12.9-10.3,25.8-25.8,25.8c-12.9,0-25.8-10.3-25.8-25.8v-2.6v-2.6c-15.5-113.5-113.5-196-229.5-196H500h-2.6c-116.1,0-211.5,82.5-229.5,193.4c0,2.6,0,5.2,0,7.7v2.6c0,15.5-12.9,25.8-25.8,25.8c-12.9,0-25.8-12.9-25.8-25.8l0,0l0,0v-2.6c0-2.6,0-5.2,0-5.2c12.9-103.2,82.5-188.3,177.9-224.4c-54.2-36.1-90.3-98-90.3-167.6c0-110.9,85.1-198.6,196-198.6c110.9,0,196,90.3,196,198.6c0,72.2-36.1,134.1-90.3,167.6c92.8,36.1,162.5,118.6,177.9,221.8C783.7,747.6,783.7,750.2,783.7,755.3L783.7,755.3z M649.6,355.6c0-82.5-67.1-149.6-149.6-149.6s-149.6,67.1-149.6,149.6c0,82.5,67.1,149.6,149.6,149.6S649.6,438.1,649.6,355.6z" />
@@ -489,6 +489,60 @@
     </div>
 </footer>
 
+<div class="auth-modal" id="registration">
+    <button class="modal-close"></button>
+    <div class="auth-modal__body">
+        <h3 class="auth-modal__title">Registration</h3>
+        <form action="#" class="auth-modal__form">
+            <label class="custom__label">
+                <span class="custom__label-text">Username</span>
+                <input autocomplete="off" type="text" name="username" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom__label">
+                <span class="custom__label-text">Email</span>
+                <input autocomplete="off" type="email" name="email" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom__label">
+                <span class="custom__label-text">Password</span>
+                <input autocomplete="off" type="password" name="password" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom__label">
+                <span class="custom__label-text">Confirm password</span>
+                <input autocomplete="off" type="password" name="password-repeat" class="custom__label-input" required data-focus-input>
+            </label>
+            <label class="custom-checkbox__label">
+                <input type="checkbox" name="registration-checkbox" class="custom-checkbox__input" checked required>
+                <span class="custom-checkbox__text">Accept the <a href="#">terms</a> and <a href="#">policies</a></span>
+            </label>
+            <div class="auth-modal__form-footer">
+                <button type="submit" class="btn blueBtn">Registration</button>
+                or <a class="modal-switch" href="#authorization">Sign in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="auth-modal" id="authorization">
+    <button class="modal-close"></button>
+    <div class="auth-modal__body">
+        <h3 class="auth-modal__title">Sign in</h3>
+        <form action="#" class="auth-modal__form">
+            <label class="custom__label">
+                <span class="custom__label-text">Username</span>
+                <input autocomplete="off" type="text" name="username" class="custom__label-input" required data-focus-input>
+            </label>
+
+            <label class="custom__label">
+                <span class="custom__label-text">Password</span>
+                <input autocomplete="off" type="password" name="password" class="custom__label-input" required data-focus-input>
+            </label>
+            <div class="auth-modal__form-footer">
+                <a href="#" class="foret-pathword">Forget your password ?</a>
+                <button type="submit" class="btn blueBtn">Sign in</button>
+                or <a class="modal-switch" href="#registration">Registration</a>
+            </div>
+        </form>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="js/app.min.js"></script>
 </body>

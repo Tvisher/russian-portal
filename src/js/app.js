@@ -210,3 +210,47 @@ burgerMenu.addEventListener("click", (e) => {
     window.addEventListener("resize", resizeFunc);
 
 })();
+
+
+
+const stylinginputs = document.querySelectorAll('[data-focus-input]');
+stylinginputs.forEach(input => {
+    input.addEventListener('focus', (e) => {
+        const input = e.target;
+        const inputpParent = e.target.parentNode;
+        const transformtext = inputpParent.querySelector('.custom__label-text');
+        transformtext.classList.add('fixed');
+
+        input.addEventListener('blur', (e) => {
+            const inputValue = e.target.value.trim();
+            if (inputValue.length === 0) {
+                transformtext.classList.remove('fixed');
+            }
+        }, { once: true });
+    });
+});
+
+
+
+document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target.closest('#login-btn')) {
+        document.querySelector('#authorization').classList.add('show');
+    }
+    if (target.closest('.modal-close')) {
+        e.preventDefault();
+        target.parentNode.classList.remove('show')
+    }
+
+    if (target.closest('.modal-switch')) {
+        const modalName = target.getAttribute('href');
+        if (modalName === "#authorization") {
+            document.querySelector('#authorization').classList.add("show");
+            document.querySelector('#registration').classList.remove("show");
+        }
+        if (modalName === "#registration") {
+            document.querySelector('#registration').classList.add("show");
+            document.querySelector('#authorization').classList.remove("show");
+        }
+    }
+})

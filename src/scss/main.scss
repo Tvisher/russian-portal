@@ -1912,7 +1912,7 @@ main {
   }
 
   .custom-checkbox__label .custom-checkbox__text {
-    padding-left: 30px;
+    padding-left: 25px;
     font-size: 14px;
   }
 
@@ -3079,7 +3079,7 @@ a.article__comments {
   }
 
   .custom-checkbox__text {
-    padding-left: 40px;
+    padding-left: 30px;
     position: relative;
 
     &:before {
@@ -3087,7 +3087,7 @@ a.article__comments {
       content: '';
       left: 0;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-60%);
       width: 20px;
       height: 20px;
       border-radius: 4px;
@@ -3101,7 +3101,7 @@ a.article__comments {
       content: '';
       left: 0;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-60%);
       width: 20px;
       height: 20px;
       border-radius: 4px;

@@ -16,7 +16,8 @@
     "aos": "^2.3.4",
     "gulp-cli": "^2.3.0",
     "jquery": "^3.6.0",
-    "modal-video": "^2.4.6"
+    "modal-video": "^2.4.6",
+    "package": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",

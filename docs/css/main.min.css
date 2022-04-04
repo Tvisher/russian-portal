@@ -3525,11 +3525,11 @@ main {
 }
 
 .companies__menu a:hover {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .companies__menu a.active {
-  color: black;
+  color: rgb(0, 0, 0);
   border-left: 3px solid #0066FF;
 }
 
@@ -3941,7 +3941,7 @@ main {
 .article__tags .article__tag:hover {
   color: #000000;
   border-color: #000000;
-  box-shadow: inset 0px 0px 0px 1px black;
+  box-shadow: inset 0px 0px 0px 1px rgb(0, 0, 0);
 }
 
 .article__tags .article__tag:not(:last-child) {
@@ -4460,7 +4460,7 @@ a.article__comments:hover svg g {
     left: -100%;
     opacity: 0;
     transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    box-shadow: 0px 20vh 0px 0px white;
+    box-shadow: 0px 20vh 0px 0px rgb(255, 255, 255);
     background-color: #fff;
     z-index: 12;
     padding-top: 70px;
